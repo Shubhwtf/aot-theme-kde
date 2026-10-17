@@ -26,6 +26,9 @@ Everything from the boot menu to your terminal, in leather, steel, brass and blo
 | **Login screen** | SDDM (Qt 6) theme with a big clock, emblem and a shake-on-wrong-password field |
 | **Boot** | GRUB theme and a Plymouth splash with a breathing emblem and password prompt |
 | **Terminals** | Konsole, Kitty and btop color themes, plus a neofetch wings logo |
+| **Neovim** | `attack-on-titan` colorscheme (treesitter, LSP, telescope, neo-tree, lualine, bufferline) and a full config with a wings dashboard |
+| **Kitty config** | Powerline tabs, cursor trail, blur and the AoT palette |
+| **4K fan wallpapers** | A script that pulls the top-rated 4K Attack on Titan wallpapers from wallhaven for your personal use |
 
 ## Screenshots
 
@@ -36,9 +39,22 @@ Everything from the boot menu to your terminal, in leather, steel, brass and blo
 <tr><td align="center">Plasma splash</td><td align="center">GRUB</td></tr>
 </table>
 
+<table>
+<tr><td><img src="assets/screenshots/nvim-dashboard.jpg" alt="Neovim dashboard"/></td><td><img src="assets/screenshots/nvim.jpg" alt="Neovim editing"/></td></tr>
+<tr><td align="center">Neovim dashboard in kitty</td><td align="center">Neovim with neo-tree and lualine</td></tr>
+</table>
+
 ### Wallpapers
 
 ![Wallpapers](assets/screenshots/wallpapers.jpg)
+
+Want official-style art too? Fetch the top-rated 4K Attack on Titan wallpapers from [wallhaven](https://wallhaven.cc) into `~/.local/share/wallpapers/AttackOnTitan-Collection`, where Plasma's wallpaper picker finds them:
+
+```bash
+./scripts/fetch-wallpapers.py --count 18
+```
+
+They are not bundled here because they belong to their artists.
 
 ## Install
 
@@ -51,6 +67,7 @@ cd aot-theme-kde
 ./install.sh --apply              # install and switch to the theme (your configs are backed up first)
 ./install.sh --apply --kvantum    # same, using the Kvantum widget style
 sudo ./install.sh --system        # login screen, GRUB and Plymouth
+./install.sh --dotfiles           # kitty.conf + Neovim config (backed up first)
 ```
 
 `./install.sh` with no option only installs the files. You can then pick **Attack on Titan** in *System Settings › Colors & Themes › Global Theme*.
@@ -70,6 +87,21 @@ The installer only rebuilds your initramfs when the `plymouth` hook is already i
 - **Kitty**: `include themes/attack-on-titan.conf` is appended to `kitty.conf`.
 - **btop**: `color_theme` is set to `attack-on-titan`.
 - **neofetch**: see [`terminal/neofetch/README.txt`](terminal/neofetch/README.txt).
+</details>
+
+<details>
+<summary><b>Neovim</b></summary>
+
+`dotfiles/nvim` is a complete lazy.nvim config (Neovim 0.11+): telescope, neo-tree, the new `main` branch of nvim-treesitter, lualine, bufferline, alpha dashboard, gitsigns, which-key, indent guides and autopairs. It needs a Nerd Font and the `tree-sitter` CLI (`npm i -g tree-sitter-cli` or `pacman -S tree-sitter-cli`).
+
+Only want the colors? Copy `dotfiles/nvim/colors` and `dotfiles/nvim/lua/aot` into your config and run `:colorscheme attack-on-titan`. The lualine theme lives in `dotfiles/nvim/lua/lualine/themes`.
+
+| Key | Action |
+|---|---|
+| `Ctrl-p` | find files |
+| `Space f g` / `f b` / `f r` | grep / buffers / recent files |
+| `Ctrl-n` | file tree |
+| `Shift-h` / `Shift-l` | previous / next buffer |
 </details>
 
 ## Uninstall
