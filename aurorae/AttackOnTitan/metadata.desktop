@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Attack on Titan
+Comment=Survey Corps window decoration
+X-KDE-PluginInfo-Author=Shubhwtf
+X-KDE-PluginInfo-Name=AttackOnTitan
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPLv3
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=declarativeappletscript
