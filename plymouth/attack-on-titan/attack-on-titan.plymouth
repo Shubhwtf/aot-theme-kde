@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Attack on Titan
+Description=Survey Corps boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/attack-on-titan
+ScriptFile=/usr/share/plymouth/themes/attack-on-titan/attack-on-titan.script
