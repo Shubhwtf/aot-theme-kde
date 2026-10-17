@@ -1,0 +1,55 @@
+# Attack on Titan GRUB theme — https://github.com/Shubhwtf/aot-theme-kde
+title-text: ""
+desktop-image: "background.jpg"
+desktop-color: "#0c0a09"
+terminal-font: "JetBrainsMono NFM Regular 18"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ boot_menu {
+    left = 50%-320
+    top = 47%
+    width = 640
+    height = 40%
+    item_font = "Cinzel Regular 20"
+    selected_item_font = "Cinzel Regular 26"
+    item_color = "#b3a68f"
+    selected_item_color = "#efe6d4"
+    item_height = 56
+    item_padding = 24
+    item_spacing = 10
+    icon_width = 0
+    icon_height = 0
+    item_icon_space = 0
+    selected_item_pixmap_style = "select_*.png"
+    scrollbar = true
+    scrollbar_width = 4
+    scrollbar_thumb = "scrollbar_thumb_*.png"
+}
+
++ progress_bar {
+    id = "__timeout__"
+    left = 50%-200
+    top = 86%
+    width = 400
+    height = 3
+    show_text = false
+    bg_color = "#2e2722"
+    fg_color = "#b8302a"
+    border_color = "#2e2722"
+}
+
++ label {
+    id = "__timeout__"
+    left = 0
+    top = 86%+14
+    width = 100%
+    align = "center"
+    font = "Cinzel Regular 20"
+    color = "#7a6e60"
+    text = "Advancing in %d seconds"
+}
