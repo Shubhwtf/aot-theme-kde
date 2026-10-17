@@ -1,0 +1,14 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [{ "Name": "Shubhwtf" }],
+        "Category": "",
+        "Description": "Shinzou wo Sasageyo. A complete Attack on Titan desktop.",
+        "Id": "com.github.shubhwtf.attackontitan",
+        "License": "GPL-3.0",
+        "Name": "Attack on Titan",
+        "Version": "1.0",
+        "Website": "https://github.com/Shubhwtf/aot-theme-kde"
+    },
+    "X-Plasma-APIVersion": "2"
+}
