@@ -44,6 +44,19 @@ Everything from the boot menu to your terminal, in leather, steel, brass and blo
 
 ### Wallpapers
 
+The theme with official-style 4K fan art as the background:
+
+![SDDM login on fan art](assets/screenshots/fan-sddm.jpg)
+<sub>SDDM login. Wallpaper: [wallhaven m986m8](https://wallhaven.cc/w/m986m8), official art via [shingeki.tv](https://shingeki.tv/), uploaded by [orsted2222](https://wallhaven.cc/user/orsted2222)</sub>
+
+![Launcher and btop on fan art](assets/screenshots/fan-launcher.jpg)
+<sub>Launcher and btop. Wallpaper: [wallhaven lqjljl](https://wallhaven.cc/w/lqjljl), uploaded by [DeathNote83](https://wallhaven.cc/user/DeathNote83)</sub>
+
+![Dolphin and neofetch on fan art](assets/screenshots/fan-desktop.jpg)
+<sub>Dolphin and neofetch. Wallpaper: [wallhaven 0jz1km](https://wallhaven.cc/w/0jz1km), uploaded by [willmtemple](https://wallhaven.cc/user/willmtemple)</sub>
+
+All rights to the artwork belong to its artists and to Hajime Isayama, Kodansha, Wit Studio and MAPPA. If one of these is yours and you want it credited differently or removed, please open an issue.
+
 Want official-style art too? Fetch the top-rated 4K Attack on Titan wallpapers from [wallhaven](https://wallhaven.cc) into `~/.local/share/wallpapers/AttackOnTitan-Collection`, where Plasma's wallpaper picker finds them:
 
 ```bash
