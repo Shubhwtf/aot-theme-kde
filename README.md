@@ -33,8 +33,6 @@ Everything from the boot menu to your terminal, in leather, steel, brass and blo
 ## Screenshots
 
 <table>
-<tr><td><img src="assets/screenshots/launcher.jpg" alt="Launcher and btop"/></td><td><img src="assets/screenshots/sddm.jpg" alt="SDDM login"/></td></tr>
-<tr><td align="center">Launcher, panel and btop on <i>The Rumbling</i></td><td align="center">SDDM login</td></tr>
 <tr><td><img src="assets/screenshots/splash.jpg" alt="Splash screen"/></td><td><img src="assets/screenshots/grub.jpg" alt="GRUB"/></td></tr>
 <tr><td align="center">Plasma splash</td><td align="center">GRUB</td></tr>
 </table>
@@ -45,8 +43,6 @@ Everything from the boot menu to your terminal, in leather, steel, brass and blo
 </table>
 
 ### Wallpapers
-
-![Wallpapers](assets/screenshots/wallpapers.jpg)
 
 Want official-style art too? Fetch the top-rated 4K Attack on Titan wallpapers from [wallhaven](https://wallhaven.cc) into `~/.local/share/wallpapers/AttackOnTitan-Collection`, where Plasma's wallpaper picker finds them:
 
