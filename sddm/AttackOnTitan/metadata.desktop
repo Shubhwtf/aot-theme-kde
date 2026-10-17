@@ -1,0 +1,14 @@
+[SddmGreeterTheme]
+Name=Attack on Titan
+Description=Survey Corps login screen
+Author=Shubhwtf
+License=GPL-3.0
+Type=sddm-theme
+Version=1.0
+Website=https://github.com/Shubhwtf/aot-theme-kde
+Screenshot=preview.jpg
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=AttackOnTitan
+Theme-API=2.0
+QtVersion=6
