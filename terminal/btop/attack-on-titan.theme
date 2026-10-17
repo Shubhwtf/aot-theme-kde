@@ -1,0 +1,64 @@
+# --------------------------------------------------
+# Attack on Titan theme for btop++
+# --------------------------------------------------
+
+# Main UI Colors
+theme[main_bg]="#12100e"
+theme[main_fg]="#e8dcc4"
+theme[title]="#c9a14a"
+theme[hi_fg]="#d23a2f"
+theme[selected_bg]="#5e1410"
+theme[selected_fg]="#efe6d4"
+theme[inactive_fg]="#7a6e60"
+theme[graph_text]="#7a6e60"
+theme[meter_bg]="#4a4038"
+theme[proc_misc]="#d9782d"
+
+# Box Borders and Dividers
+theme[cpu_box]="#7a2a22"
+theme[mem_box]="#8a6d32"
+theme[net_box]="#2f4f6f"
+theme[proc_box]="#3f6b4f"
+theme[div_line]="#4a4038"
+
+# Temperature Gradient (Cool -> Hot)
+theme[temp_start]="#5c8f6c"
+theme[temp_mid]="#c9a14a"
+theme[temp_end]="#d23a2f"
+
+# CPU Usage Gradient (Cool -> Hot)
+theme[cpu_start]="#5c8f6c"
+theme[cpu_mid]="#c9a14a"
+theme[cpu_end]="#d23a2f"
+
+# Memory Usage Gradients
+theme[free_start]="#4a78a8"
+theme[free_mid]="#5c8f6c"
+theme[free_end]="#79a883"
+
+theme[cached_start]="#4a78a8"
+theme[cached_mid]="#7fa8d4"
+theme[cached_end]="#e8dcc4"
+
+theme[available_start]="#5c8f6c"
+theme[available_mid]="#79a883"
+theme[available_end]="#c9a14a"
+
+theme[used_start]="#5c8f6c"
+theme[used_mid]="#c9a14a"
+theme[used_end]="#d23a2f"
+
+# Network Gradients
+theme[download_start]="#4a78a8"
+theme[download_mid]="#6491be"
+theme[download_end]="#7fa8d4"
+
+theme[upload_start]="#5c8f6c"
+theme[upload_mid]="#79a883"
+theme[upload_end]="#c9a14a"
+
+# Process List CPU Usage Gradient (Cool -> Hot)
+theme[process_start]="#5c8f6c"
+theme[process_mid]="#c9a14a"
+theme[process_end]="#d23a2f"
+
