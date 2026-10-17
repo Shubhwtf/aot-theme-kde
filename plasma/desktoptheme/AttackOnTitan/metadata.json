@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Authors": [{ "Name": "Shubhwtf" }],
+        "Category": "",
+        "Description": "Survey Corps Plasma style: leather, steel and blood",
+        "EnabledByDefault": true,
+        "Id": "AttackOnTitan",
+        "License": "GPL-3.0",
+        "Name": "Attack on Titan",
+        "Version": "1.0",
+        "Website": "https://github.com/Shubhwtf/aot-theme-kde"
+    },
+    "X-Plasma-API": "5.0"
+}
