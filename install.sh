@@ -23,17 +23,19 @@ usage: ./install.sh [options]
   --apply          install, then switch the desktop to the theme (configs are backed up first)
   --kvantum        with --apply: use the Kvantum widget style instead of Breeze
   --wallpaper ID   with --apply: WallMaria | WingsOfFreedom | Rumbling | Paths (default WallMaria)
+  --dotfiles       also install the kitty.conf and Neovim config from dotfiles/ (backed up first)
   --system         (run with sudo) install the SDDM, GRUB and Plymouth themes
   -h, --help       show this help
 EOF
 }
 
-APPLY=0; KVANTUM=0; SYSTEM=0
+APPLY=0; KVANTUM=0; SYSTEM=0; DOTFILES=0
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --apply) APPLY=1 ;;
         --kvantum) KVANTUM=1 ;;
         --wallpaper) WALLPAPER="AttackOnTitan-$2"; shift ;;
+        --dotfiles) DOTFILES=1 ;;
         --system) SYSTEM=1 ;;
         -h|--help) usage; exit 0 ;;
         *) usage; exit 1 ;;
@@ -176,12 +178,33 @@ apply_theme() {
     note "For the login screen, GRUB and boot splash: sudo ./install.sh --system"
 }
 
+install_dotfiles() {
+    local bk="$HOME/.aot-backup-$(date +%Y%m%d-%H%M%S)-dotfiles"
+    mkdir -p "$bk"
+    [[ -d "$CONF/nvim" ]] && cp -a "$CONF/nvim" "$bk/"
+    [[ -d "$CONF/kitty" ]] && cp -a "$CONF/kitty" "$bk/"
+    say "Backed up nvim and kitty to $bk"
+
+    say "Kitty config"
+    mkdir -p "$CONF/kitty/themes"
+    cp "$SRC/dotfiles/kitty/kitty.conf" "$CONF/kitty/kitty.conf"
+    cp "$SRC/terminal/kitty/attack-on-titan.conf" "$CONF/kitty/themes/"
+    pkill -USR1 -x kitty 2>/dev/null || true
+
+    say "Neovim config"
+    mkdir -p "$CONF/nvim"
+    cp -r "$SRC/dotfiles/nvim/." "$CONF/nvim/"
+    command -v tree-sitter >/dev/null || note "install tree-sitter-cli so nvim-treesitter can build parsers"
+    note "open nvim once; lazy.nvim installs the plugins"
+}
+
 if [[ $SYSTEM -eq 1 ]]; then
     install_system
     exit 0
 fi
 
 install_user
+[[ $DOTFILES -eq 1 ]] && install_dotfiles
 if [[ $APPLY -eq 1 ]]; then
     apply_theme
 else
